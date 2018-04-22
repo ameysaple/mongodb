@@ -14,7 +14,7 @@ Download [Mongo DB Community Server](https://www.mongodb.com/dr/fastdl.mongodb.o
 ### Go to bin 
 
 ```
-mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:mongodb\log\mongo.log --logappend --install
+mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
 ```
 
 * *Start MongoDB Service*
@@ -38,10 +38,25 @@ show dbs
 
 ## USE DATABASE
 ```
-use mydbname
+use myNewDB
 ```
 
+## CREATE DATABASE
+```
+use myNewDB
 
+db.myNewCollection1.insertOne( { x: 1 } )
+```
+
+* **The *insertOne()* operation creates both the database *myNewDB* and the collection *myNewCollection1* if they do not already exist.**
+
+## CREATE COLLECTION
+```
+db.myNewCollection2.insertOne( { x: 1 } )
+db.myNewCollection3.createIndex( { y: 1 } )
+```
+
+* **Both the *insertOne()* and the *createIndex()* operations create their respective collection if they do not already exist.**
 
 
 
