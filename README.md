@@ -6,12 +6,12 @@ Download [Mongo DB Community Server](https://www.mongodb.com/dr/fastdl.mongodb.o
 
 * **After Installing**  => *go to installed path*
 
-##Create Directory **data/db** & **log**
+## Create Directory **data/db** & **log**
 
 *	**data/db** => database storage
 * 	**log** => log files
 
-###Go to bin 
+### Go to bin 
 
 ```
 mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:mongodb\log\mongo.log --logappend --install
@@ -29,11 +29,16 @@ net start MongoDB
 mongo
 ```
 -------------------------------
-#LIST OF Mongo DB Commands
+# LIST OF Mongo DB Commands
 
-##SHOW DATABASES
+## SHOW DATABASES
 ```
 show dbs
+```
+
+## USE DATABASE
+```
+use mydbname
 ```
 
 
